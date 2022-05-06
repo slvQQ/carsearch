@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Search</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Car Listings</h1>
+<nav>
+    <a class="active" href="./">Home</a>
+    <a class="active" href="./list">List</a>
+    <a class="active" href="./searchcars">Search</a>
+    <a class="active" href="./predictedlist">Predicted List</a>
+</nav>
+
+<form method = "GET" action="/search-result">
+    <p>Search for a car</p>
+        <input id="search-box" type="text" name="keyword"/>
+        <input id = "button" type = "Submit" value = "Find"/>
+</form>
+
+</body> 
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predicted List</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Car Listings</h1>
+    <nav>
+      <a class="active" href="./">Home</a>
+      <a class="active" href="./list">List</a>
+      <a class="active" href="./searchcars">Search</a>
+      <a class="active" href="./predictedlist">Predicted List</a>
+    </nav>
+
+    <table class="table-sort">
+
+        
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Year</th>
+          <th>Mileage</th>
+          <th>Additional Details</th>
+          <th>Location</th>
+          <th>Link</th>
+          <th>Label</th>
+          <th>Predicted Label</th>
+        </tr>
+    </thead>
+        <%predictedListings.forEach(function(predictedlisting){%>
+            <tbody>
+        <tr>
+          <td><%=predictedlisting.Name %></td>
+          <td><%=predictedlisting.Price %></td>
+          <td><%=predictedlisting.Year %></td>
+          <td><%=predictedlisting.Mileage %></td>
+          <td><%=predictedlisting.AdditionalDetails %></td>
+          <td><%=predictedlisting.Location %></td>
+          <td>
+            <a
+              href="<%=predictedlisting.Link %>"
+              style="color: rgb(0, 0, 0)"
+              target="_blank"
+              ><%=predictedlisting.Link %></a
+            >
+          </td>
+          <td><%=predictedlisting.Label %></td>
+          <td><%=predictedlisting.PredictedLabel %></td>
+        </tr>
+        <%})%>
+    </tbody>
+    </table>
+  </body>
+</html>
